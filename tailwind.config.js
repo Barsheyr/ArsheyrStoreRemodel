@@ -2,7 +2,16 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        Inter: ["Inter", "sans-serif"],
+        Platypi: ["Platypi", "serif"],
+      },
+    },
   },
-  plugins: [require("@tailwindcss/typography"), require("daisyui")],
+  plugins: [require("daisyui")],
+
+  daisyui: {
+    themes: ["emerald", "halloween"],
+  },
 };
