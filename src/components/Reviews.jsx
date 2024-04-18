@@ -21,11 +21,11 @@ const Reviews = () => {
       <div className="flex flex-row gap-10  px-2 lg:px-0">
         <div className="flex flex-col gap-10">
           <p className="lg:text-xl text-sm"> REVIEWS</p>
-          <h1 className="lg:text-4xl text-xl">
+          <h1 className="lg:text-4xl text-2xl">
             What buyers say <br /> about our store
           </h1>
-          <div className="btn w-[50%] btn-primary ">
-            <p className="lg:text-xl text-sm ">Shop Now </p>
+          <div className="btn lg:w-[50%] btn-primary ">
+            <p className="lg:text-xl text-sm">Shop Now </p>
           </div>
         </div>
 
