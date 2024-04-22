@@ -91,6 +91,10 @@ const SingleProduct = () => {
           </div>
         </div>
       </div>
+
+      <div>
+        <h1 className="text-4xl"> Related Products </h1>
+      </div>
     </section>
   );
 };

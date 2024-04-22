@@ -18,13 +18,13 @@ const Reviews = () => {
   return (
     <main className="py-32">
       <h1 className="text-4xl text-center mb-20"> Testimonials </h1>
-      <div className="flex flex-row gap-10  px-2 lg:px-0">
-        <div className="flex flex-col gap-10">
-          <p className="lg:text-xl text-sm"> REVIEWS</p>
-          <h1 className="lg:text-4xl text-2xl">
+      <div className="flex lg:flex-row flex-col gap-10  px-2 lg:px-0">
+        <div className="flex flex-col text-center lg:text-left gap-10">
+          <p className="lg:text-xl text-2xl"> REVIEWS</p>
+          <h1 className="lg:text-4xl text-5xl">
             What buyers say <br /> about our store
           </h1>
-          <div className="btn lg:w-[50%] btn-primary ">
+          <div className="btn max-w-4xl mx-auto lg:mx-0 btn-primary">
             <p className="lg:text-xl text-sm">Shop Now </p>
           </div>
         </div>
