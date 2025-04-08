@@ -7,22 +7,27 @@ import { useDispatch, useSelector } from "react-redux";
 import { toggleTheme } from "../features/user/userSlice";
 
 const Navbar = () => {
-  const numItemsInCart = useSelector((state) => state.cartState.numItemsInCart);
-
   const dispatch = useDispatch();
+
   const handleTheme = () => {
     dispatch(toggleTheme());
   };
+
+  const numItemsInCart = useSelector((state) => state.cartState.numItemsInCart);
+
+  const theme = useSelector((state) => state.userState.theme);
+  const isDarkTheme = theme === "dracula";
+
   return (
-    <nav className="">
-      <div className="navbar align-element ">
+    <nav className="bg-base-200">
+      <div className="navbar align-element">
         <div className="navbar-start">
-          {/* Title */}
+          {/* TITLE */}
           <NavLink
             to="/"
-            className="hidden lg:flex text-3xl font-bold items-center"
+            className="hidden lg:flex btn btn-primary text-3xl items-center"
           >
-            Arsheyr <span className="text-sm mt-5"> store </span>
+            C
           </NavLink>
           {/* DROPDOWN */}
           <div className="dropdown">
@@ -38,24 +43,25 @@ const Navbar = () => {
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal space-x-3 ">
+          <ul className="menu menu-horizontal">
             <NavLinks />
           </ul>
         </div>
         <div className="navbar-end">
-          {/* THEME ICONS */}
-          <label className="swap swap-rotate ">
-            {/* this hidden checkbox controls the state */}
-            <input type="checkbox" onChange={handleTheme} />
-
-            {/* sun icon */}
+          {/* THEME SETUP */}
+          <label className="swap swap-rotate">
+            <input
+              type="checkbox"
+              onChange={handleTheme}
+              defaultChecked={isDarkTheme}
+            />
+            {/* sun icon*/}
             <BsSunFill className="swap-on h-4 w-4" />
-
-            {/* moon icon */}
+            {/* moon icon*/}
             <BsMoonFill className="swap-off h-4 w-4" />
           </label>
-          {/* CART LINK*/}
-          <NavLink to="cart" className="btn btn-ghost btn-circle btn-md ml-4">
+          {/* CART LINK */}
+          <NavLink to="/cart" className="btn btn-ghost btn-circle btn-md ml-4">
             <div className="indicator">
               <BsCart3 className="h-6 w-6" />
               <span className="badge badge-sm badge-primary indicator-item">

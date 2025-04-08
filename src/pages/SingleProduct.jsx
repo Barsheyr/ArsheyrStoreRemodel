@@ -36,7 +36,7 @@ const SingleProduct = () => {
     setAmount(parseInt(e.target.value));
   };
   return (
-    <section>
+    <section className="align-element py-20">
       <div className="text-md breadcrumbs">
         <ul>
           <li>

@@ -1,4 +1,5 @@
 import { FeaturedProducts, Hero, Reviews } from "../components";
+import Banners from "../components/Banners";
 
 import { customFetch } from "../utils";
 
@@ -13,11 +14,14 @@ export const loader = async () => {
 
 const Landing = () => {
   return (
-    <>
-      <Hero />
-      <FeaturedProducts />
-      <Reviews />
-    </>
+    <div>
+      <div className="align-element py-20">
+        <Hero />
+        <FeaturedProducts />
+        <Reviews />
+      </div>
+      <Banners />
+    </div>
   );
 };
 export default Landing;
