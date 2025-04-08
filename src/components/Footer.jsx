@@ -219,7 +219,7 @@ const Footer = () => {
 
         <div className="mt-16 flex flex-col items-center justify-between space-y-4 border-t border-white/10 pt-8 text-center sm:flex-row sm:text-left">
           <p className="text-sm text-white/50">
-            © {new Date().getFullYear()} SleekWatch. All rights reserved.
+            © {new Date().getFullYear()} Arsheyr Store. All rights reserved.
           </p>
           <div className="flex space-x-4 text-sm text-white/50">
             <Link to="/privacy" className="hover:text-white">
